@@ -1,10 +1,11 @@
 import React from 'react';
 import './app.css';
+import Header from './Components/Header';
 
 function App() {
   return (
     <div className="app">
-      {/* header  */}
+      <Header />
       {/* Sidebar  */}
       {/* react-router for chat screen  */}
 
