@@ -20,7 +20,7 @@ const Header = () => {
         <SearchIcon className="header_search-icon" />
         <input
           className="header_search-input"
-          type="text"
+          type="search"
           placeholder="Search"
         />
       </div>
