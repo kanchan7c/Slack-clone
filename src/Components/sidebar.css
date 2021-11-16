@@ -5,6 +5,11 @@
   color: white;
 }
 
+.sidebar > hr {
+  margin: 1rem 0;
+  border: 1px solid #49274b;
+}
+
 .sidebar_header {
   display: flex;
   border-bottom: 1px solid #49274b;
