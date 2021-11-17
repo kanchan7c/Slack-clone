@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { InfoOutlined, StarBorderOutlined } from "@mui/icons-material";
 import db from "../firebase";
 import Message from "./Message";
+import ChatInput from "./ChatInput";
 
 const Chat = () => {
   const { roomID } = useParams();
@@ -26,6 +27,7 @@ const Chat = () => {
       );
   }, [roomID]);
 
+  console.log(roomMessages);
   return (
     <div className="chat">
       <div className="chat_header">
@@ -42,15 +44,18 @@ const Chat = () => {
         </div>
       </div>
       <div className="chat_messages">
-        {roomMessages.map(({ message, timestamp, user, userimage }) => (
+        {roomMessages.map(({ message, timestamp, user, userImage }) => (
           <Message
             message={message}
             timestamp={timestamp}
             user={user}
-            userimage={userimage}
+            userImage={userImage}
+            key={timestamp}
           />
         ))}
       </div>
+
+      <ChatInput channelName={roomDetails?.name} channelId={roomID} />
     </div>
   );
 };

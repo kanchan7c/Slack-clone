@@ -1,13 +1,13 @@
 import React from "react";
 import "./message.css";
 
-const Message = ({ message, timestamp, user, userimage }) => {
+const Message = ({ message, timestamp, user, userImage }) => {
   return (
     <div className="message">
       <img
         src={
-          userimage
-            ? userimage
+          userImage
+            ? userImage
             : "https://www.bsn.eu/wp-content/uploads/2016/12/user-icon-image-placeholder.jpg"
         }
         alt={user}
