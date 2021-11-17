@@ -3,6 +3,7 @@ import './app.css';
 import Header from './Components/Header';
 import Sidebar from './Components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Chat from './Components/Chat';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Sidebar />
           <Switch>
             <Route path="/room/:roomID">
-              <h1>Chat screen</h1>
+              <Chat />
             </Route>
             <Route path="/">
               <h1>Welcome</h1>
