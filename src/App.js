@@ -7,11 +7,20 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
   return (
     <div className="app">
-      <Header />
-      <div className="app_body">
-        <Sidebar />
-        {/* react-router for chat screen  */}
-      </div>
+      <Router>
+        <Header />
+        <div className="app_body">
+          <Sidebar />
+          <Switch>
+            <Route path="/room/:roomID">
+              <h1>Chat screen</h1>
+            </Route>
+            <Route path="/">
+              <h1>Welcome</h1>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
