@@ -27,7 +27,8 @@ const Chat = () => {
       );
   }, [roomID]);
 
-  console.log(roomMessages);
+  //   console.log(roomMessages);
+
   return (
     <div className="chat">
       <div className="chat_header">
